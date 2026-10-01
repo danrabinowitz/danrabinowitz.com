@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorite Follows — Dan Rabinowitz</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #666666;
+      --border: #eeeeee;
+      --link: #0969da;
+      --link-hover: #054da0;
+      --tag-bg: #f4f4f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --text: #e4e4e7;
+        --muted: #a1a1aa;
+        --border: #27272a;
+        --link: #58a6ff;
+        --link-hover: #79b8ff;
+        --tag-bg: #1e1e24;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      padding: 4rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* Navigation & Header */
+    nav {
+      margin-bottom: 2.5rem;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    header {
+      margin-bottom: 3.5rem;
+    }
+
+    h1 {
+      font-size: 1.85rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .description {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* Creator Entries */
+    .creator-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .creator {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 3rem;
+    }
+
+    .creator:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .creator-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .creator-name {
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .creator-name a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .creator-name a:hover {
+      text-decoration: underline;
+    }
+
+    .creator-tag {
+      font-size: 0.8rem;
+      color: var(--muted);
+      background-color: var(--tag-bg);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .creator-bio {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Post Recommendations */
+    .post-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .post-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .post-link {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 500;
+      font-size: 0.98rem;
+    }
+
+    .post-link:hover {
+      color: var(--link-hover);
+    }
+
+    .post-takeaway {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <nav>
+      <a href="/">← danrabinowitz.com</a>
+    </nav>
+
+    <header>
+      <h1>My favorite follows</h1>
+      <p class="description">
+        Content creators whose work I enjoy and inspires me.
+      </p>
+    </header>
+
+    <section class="creator-list">
+
+      <!-- Creator 1 -->
+      <article class="creator">
+        <div class="creator-header">
+          <h2 class="creator-name">
+            <a href="https://www.youtube.com/@JeffPelletier" target="_blank" rel="noreferrer">Jeff Pelletier</a>
+          </h2>
+          <span class="creator-tag">Adventure Filmmaker</span>
+        </div>
+        <p class="creator-bio">
+          Captures breathtaking adventures and landscapes through a cinematic lens.
+        </p>
+
+        <ul class="post-list">
+          <li class="post-item">
+            <a class="post-link" href="https://www.youtube.com/watch?v=qm8i5hBjpmU" target="_blank" rel="noreferrer">
+              Swiss Peaks 360k
+            </a>
+            <span class="post-takeaway">A stunning 360-degree adventure through the Swiss Alps, showcasing breathtaking landscapes and cinematic storytelling.</span>
+          </li>
+          <li class="post-item">
+            <a class="post-link" href="https://www.youtube.com/watch?v=1Qo10sZKAVQ&list=PLI8QZNLFRmnTSPvDVapftJ9xN0WxY9L-U&index=22" target="_blank" rel="noreferrer">
+              TOR Des Geants
+            </a>
+            <span class="post-takeaway">An epic endurance race through the Italian Alps, captured with stunning cinematography and immersive storytelling.</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Creator 2 -->
+      <article class="creator">
+        <div class="creator-header">
+          <h2 class="creator-name">
+            <a href="https://www.youtube.com/@JennyTough_" target="_blank" rel="noreferrer">Jenny Tough</a>
+          </h2>
+          <span class="creator-tag">Adventurer</span>
+        </div>
+        <p class="creator-bio">
+          Adventurous journeys and explorations captured with a keen eye for storytelling.
+        </p>
+
+        <ul class="post-list">
+          <li class="post-item">
+            <a class="post-link" href="https://www.youtube.com/watch?v=uo6SDTICfFE" target="_blank" rel="noreferrer">
+              Wild Places: Fastpacking Iceland
+            </a>
+            <span class="post-takeaway">A breathtaking journey through Iceland's wild landscapes, highlighting the challenges and beauty of fastpacking.</span>
+          </li>
+          <li class="post-item">
+            <a class="post-link" href="https://www.youtube.com/watch?v=SXnaWZZ4hRQ" target="_blank" rel="noreferrer">
+              Mountains of Heaven - Running Solo Across Kyrgyzstan
+            </a>
+            <span class="post-takeaway">An immersive solo adventure across Kyrgyzstan's mountainous terrain, capturing the spirit of exploration and endurance.</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Creator 3 -->
+      <article class="creator">
+        <div class="creator-header">
+          <h2 class="creator-name">
+            <a href="https://www.youtube.com/@NoahKane" target="_blank" rel="noreferrer">Noah Kane</a>
+          </h2>
+          <span class="creator-tag">Climbing YouTuber</span>
+        </div>
+        <p class="creator-bio">
+          Climbing adventures, techniques, and experiences shared through engaging and visually compelling videos.
+        </p>
+
+        <ul class="post-list">
+          <li class="post-item">
+            <a class="post-link" href="https://www.youtube.com/watch?v=2aHmrmwLhSY" target="_blank" rel="noreferrer">
+              Climbing Canada's Most Iconic Peak in the Bugaboos
+            </a>
+            <span class="post-takeaway">A thrilling ascent of one of Canada's most famous climbing destinations, showcasing both the technical challenges and the stunning scenery.</span>
+          </li>
+        </ul>
+      </article>
+
+    </section>
+
+    <footer>
+      Updated occasionally.
+    </footer>
+  </main>
+
+</body>
+</html>
